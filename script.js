@@ -74,3 +74,28 @@ function logMonth(num) {
 }
 
 logMonth(userInput);
+
+
+/* HARD: Given the information below for Tom and Jerry. 
+Tom - 	height:  9in   	mass: 8 g
+Jerry - 	height: 10in 	mass: 45 g
+Compare the BMI (Body Mass Index) of Tom & Jerry using the formula below:
+    Mass= 
+Store Tom & Jerry’s mass and height as variables. Calculate both their BMI’s. Create a Boolean variable containing information about whether Tom has a higher BMI than Jerry. Print a string to the console with the variable from step 3 ( e.g. Is Tom’s BMI higher than Jerry’s? false). */
+
+let tomHeight = 9;
+let tomMass = 8;
+let tomBMI = calcBMI(tomMass, tomHeight);
+
+let jerryHeight = 10;
+let jerryMass = 45;
+let jerryBMI = calcBMI(jerryMass, jerryHeight);
+
+function calcBMI (m, h) {
+    let bmi =  m/(h * h);
+    return bmi;
+}
+
+let higherBMI = tomBMI > jerryBMI;
+
+console.log("Tom's BMI is higher than Jerry's?: ", higherBMI);
